@@ -29,7 +29,7 @@ const html = () => {
       )
     )
     .pipe(gulpif(isProd, dest("./build")))
-    .pipe(gulpif(isDev, dest("./dev")))
+    .pipe(gulpif(isDev, dest("./docs")))
     .pipe(browserSync.stream());
 };
 
@@ -49,7 +49,7 @@ const styles = () => {
       })
     )
     .pipe(gulpif(isDev, sourcemaps.write(undefined, undefined)))
-    .pipe(gulpif(isDev, dest("./dev/css")))
+    .pipe(gulpif(isDev, dest("./docs/css")))
     .pipe(gulpif(isProd, dest("./build/css")))
     .pipe(browserSync.stream());
 };
@@ -91,7 +91,7 @@ const svgSprites = () => {
   };
   return src("src/assets/img/svg/**/*.svg")
     .pipe(sprite(config)).on('error', function(error){ console.log(error); })
-    .pipe(gulpif(isDev, dest("./dev/assets/img")))
+    .pipe(gulpif(isDev, dest("./docs/assets/img")))
     .pipe(gulpif(isProd, dest("./build/assets/img")));
 };
 
@@ -102,7 +102,7 @@ const images = () => {
     "./src/assets/img/**/*.png",
     "./src/assets/img/**/*.svg",
   ])
-    .pipe(gulpif(isDev, dest("./dev/assets/img")))
+    .pipe(gulpif(isDev, dest("./docs/assets/img")))
     .pipe(gulpif(isProd, image()))
     .pipe(gulpif(isProd, dest("./build/assets/img")))
     .pipe(browserSync.stream());
@@ -118,7 +118,7 @@ const scripts = () => {
       })
     )
     .pipe(gulpif(isDev, sourcemaps.write()))
-    .pipe(dest("./dev/js"))
+    .pipe(dest("./docs/js"))
     .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
     .pipe(gulpif(isProd, dest("./build/js")))
     .pipe(browserSync.stream());
@@ -126,20 +126,20 @@ const scripts = () => {
 
 const resources = () => {
   return src("./src/assets/**/*")
-    .pipe(gulpif(isDev, dest("./dev/assets")))
+    .pipe(gulpif(isDev, dest("./docs/assets")))
     .pipe(gulpif(isProd, dest("./build/assets")));
 };
 
 // const favicon = () => {
 //   return src('./src/favicon.ico')
-//     .pipe(gulpif(isDev, dest('./dev')))
+//     .pipe(gulpif(isDev, dest('./docs')))
 //     .pipe(gulpif(isProd, dest('./build')))
 // }
 
 const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: "./dev",
+      baseDir: "./docs",
     },
   });
   watch("./src/*.html", html);
