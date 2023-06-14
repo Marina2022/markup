@@ -1,0 +1,152 @@
+.docs {
+
+  &__main-title {
+    margin-bottom: 24px;
+  }
+
+  &__global-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    @include m {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-list {
+    width: 270px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 1px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 100px;
+
+    @include t {
+      margin-bottom: 24px;
+      width: 210px;
+      padding: 16px;
+      font-size: 14px;
+    }
+
+    @include m {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  &__nav-item {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #D9D9D988;
+
+    @include m {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    color: $text-dark-grey;
+
+    @include t {
+      font-size: 14px;
+    }
+
+    @include m {
+      font-size: 16px;
+    }
+
+    &--active {
+      color: $primary;
+      font-weight: 600;
+      line-height: 135%;
+
+    }
+  }
+
+  &__docs-list {
+    width: 870px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 76px;
+
+    @include t {
+      width: 450px;
+      margin-bottom: 42px;
+    }
+
+    @include m {
+      width: 100%;
+    }
+  }
+
+  &__doc-card {
+    width: 270px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 1px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    min-height: 120px;
+    margin-bottom: 24px;
+
+    @include t {
+      width: 210px;
+      min-height: 89px;
+    }
+
+    @include m {
+      width: 100%;
+      min-height: unset;
+    }
+  }
+}
+
+
+.doc-card {
+  padding: 16px;
+  position: relative;
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 135%;
+    max-width: 190px;
+
+    @include t {
+      max-width: 138px;
+      font-size: 14px;
+    }
+
+    @include m {
+      font-size: 16px;
+      max-width: 254px;
+    }
+  }
+
+  &__global-link {
+    color: $text-dark-grey;
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+    }
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}

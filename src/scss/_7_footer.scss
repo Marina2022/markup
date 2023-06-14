@@ -1,0 +1,133 @@
+.main-footer {
+  background-color: $bg-grey;
+  padding: 37px 0 85px 0;
+
+  @include t {
+    padding: 24px 0;
+  }
+
+  @include m {
+    padding: 40px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    @include t {
+      flex-direction: column;
+    }
+
+    @include m {
+      align-items: center;
+    }
+  }
+
+  &__logo-img {
+    width: 170px;
+    height: 47px;
+
+    @include t {
+      width: 90px;
+      height: 25px;
+      margin-bottom: 24px;
+    }
+
+    @include m {
+      width: 170px;
+      height: 47px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__links-wrapper {
+    width: 47%;
+    display: flex;
+    justify-content: space-between;
+
+    @include t {
+      width: 89%;
+      margin-bottom: 21px;
+    }
+
+    @include m {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+  }
+
+  &__links-section {
+    @include m {
+      width: 100%;
+      margin-bottom: 36px;
+      &:last-child {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &__links-section-title {
+    color: $text-light-grey;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 16px;
+    @include t {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    @include m {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__links-section-item {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 8px;
+    color: #fff;
+
+    @include t {
+      font-size: 12px;
+    }
+
+    @include m {
+      font-size: 14px;
+    }
+  }
+
+  &__working-mode {
+    display: flex;
+    flex-direction: column;
+    @include m {
+      flex-direction: row;
+      justify-content: center;
+    }
+    @media (max-width: 343px) {
+      flex-direction: column;
+    }
+  }
+
+  &__links-section-link {
+    color: #fff;
+  }
+
+  &__phone-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+  }
+
+  &__email-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    position: relative;
+    top: 4px;
+  }
+}

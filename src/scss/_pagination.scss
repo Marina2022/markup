@@ -1,0 +1,74 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 522px;
+  margin: 20px auto 96px 0;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+
+  @include t {
+    width: 396px;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  @include m {
+    width: 149px;
+    flex-wrap: wrap;
+    margin-inline: auto;
+  }
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 314px;
+
+    @include t {
+      width: 215px;
+    }
+
+    @include m {
+      margin-bottom: 12px;
+    }
+  }
+
+  .only-desktop {
+    @include t {
+      display: none;
+    }
+  }
+
+  &__page-number {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 19px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include t {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+
+    &--active {
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 1px 12px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+    }
+  }
+
+  &__page-link {
+    color: $text-dark-grey;
+  }
+
+  &__next-page-label {
+    color: $primary;
+    text-decoration-line: underline;
+  }
+}

@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+fieldset {
+  margin: 0;
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $text-dark-grey;
+  text-rendering: optimizeSpeed;
+  scrollbar-gutter: stable;
+  background-color: $bg;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input[type="search"] {-webkit-appearance: none; border-radius: 8px;}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1170px;
+
+  @media (max-width: 1199px) {
+    max-width: 690px;
+  }
+  @media (max-width: 767px) {
+    padding-inline: 15px;
+  }
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobile-visible {
+  display: none;
+  @include m {
+    display: inline-block;
+  }
+}
+
+.overlay {
+  position: fixed;
+  background-color: #000;
+  opacity: .4;
+  z-index: 18;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

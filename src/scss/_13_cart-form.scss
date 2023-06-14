@@ -1,0 +1,149 @@
+.cart-form {
+
+  &__fieldset {
+    border: none;
+    padding-inline: 24px;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px $text-light-grey solid;
+
+
+    @include t {
+      padding-inline: 16px;
+      padding-top: 16px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+  }
+
+
+  &__fieldset-title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 24px;
+
+    @include t {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__products-item {
+    margin-bottom: 16px;
+
+    @include t {
+      margin-bottom: 8px;
+    }
+
+  }
+
+  &__product-number {
+    color: $text-light-grey;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+
+    @include t {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__product-name {
+    color: $text-dark-grey;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100%;
+
+    @include t {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__input-label {
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-light-grey;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-dark-grey;
+    border: 1px solid $text-dark-grey;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+
+
+    &:last-child {
+      @include t {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__way-to-get-item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      @include m {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__radio-input-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+
+    @include t {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      margin-right: 20px;
+      background: url(../assets/img/cart/radio-unchecked.svg);
+    }
+
+    img {
+      margin-right: 8px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 12px;
+    border: 2px solid $primary;
+
+    @include t {
+      height: 43px;
+      margin-bottom: 4px;
+      margin-top: 6px;
+    }
+
+    @include m {
+      padding: 11px 32px;
+    }
+  }
+}
+
+.cart-form__radio-input:checked + .cart-form__radio-input-label::before {
+  background: url(../assets/img/cart/radio-checked.svg);
+}

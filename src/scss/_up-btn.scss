@@ -1,0 +1,19 @@
+.up-btn {
+  width: 64px;
+  height: 64px;
+  background-image: url(../assets/img/up.svg);
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 21;
+  display: none;
+
+  @include m {
+    width: 40px;
+    height: 40px;
+    bottom: 115px;
+    right: 25px;
+    background-image: url(../assets/img/up-mobile.svg);
+  }
+
+}

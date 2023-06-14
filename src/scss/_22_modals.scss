@@ -1,0 +1,129 @@
+.modal {
+  width: 370px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 52px 48px 32px 48px;
+  z-index: 19;
+
+  @include t {
+    width: 330px;
+    padding: 52px 28px 32px 28px;
+  }
+
+  @include m {
+    width: 96%;
+  }
+
+   &__title {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: $text-dark-grey;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid $primary;
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 12px;
+    padding-left: 15px;
+
+    &--grey {
+      border-color: $text-light-grey;
+    }
+  }
+
+  &__message {
+    height: 80px;
+    border: 1px solid $text-light-grey;
+    border-radius: 4px;
+    width: 100%;
+    resize: none;
+    padding: 10px 15px;
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-bottom: 17px;
+
+    &--stroke {
+      background-color: transparent;
+      border: 2px solid $primary;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__oferta-text {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    a {
+      color: #6880FF;
+      text-decoration: underline;
+    }
+
+  }
+
+  &__close-btn {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    @include t {
+      right: 12px;
+    }
+  }
+}
+
+.modal-confirm-deleted {
+  width: 390px;
+  padding: 52px 52px 15px 52px;
+
+  @include t {
+    width: 350px;
+    padding: 52px 32px 15px 32px;
+  }
+
+  &__form {
+
+  }
+
+  &__title {
+    padding-bottom: 32px;
+    margin-bottom: 0;
+  }
+
+  &__btn {
+
+  }
+}

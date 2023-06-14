@@ -1,0 +1,63 @@
+.breadcrumbs {
+  margin-bottom: 24px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__back-btn {
+    top: -6px;
+    @include t {
+      top: -8px;
+    }
+  }
+
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    font-family: 'Manrope', sans-serif;
+    line-height: 120%;
+    color: $text-light-grey;
+    margin-right: 24px;
+    position: relative;
+
+    @include t {
+      font-size: 12px;
+      line-height: 120%;
+    }
+
+    @include m {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -24px;
+      top: -2px;
+      width: 24px;
+      height: 24px;
+      background: url(../assets/img/svg/breadcrumbs-arrow.svg) no-repeat 50% / contain;
+      @include t {
+        width: 16px;
+        height: 16px;
+        right: -20px;
+      }
+    }
+
+    &:last-child {
+      color: $text-dark-grey;
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__nav-link {
+    color: inherit;
+  }
+}

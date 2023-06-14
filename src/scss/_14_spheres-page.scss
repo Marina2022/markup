@@ -1,0 +1,134 @@
+.spheres-page {
+
+  &__container{
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 96px;
+    gap: 28px;
+
+    @include t {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__main-title {
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    @media (max-width: 359px) {
+      width: 100%;
+    }
+  }
+
+}
+
+.spheres-page-card {
+  position: relative;
+  padding: 24px;
+  width: 370px;
+  height: 280px;
+  display: flex;
+  align-items: end;
+  border-radius: 8px;
+
+  @include t {
+    padding: 12px;
+    width: 210px;
+    height: 159px;
+  }
+
+  @include m {
+    width: 150px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 359px) {
+    width: 100%;
+  }
+
+  &--glass {
+    background: url(../assets/img/spheres-page/sphere-1.png) no-repeat 50% / cover, linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%);
+  }
+
+  &--lit {
+    background: url(../assets/img/spheres-page/sphere-2.png) no-repeat 50% / cover, linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%);
+  }
+
+  &--str {
+    background: url(../assets/img/spheres-page/sphere-3.png) no-repeat 50% / cover, linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%);
+  }
+
+  &--lak {
+    background: url(../assets/img/spheres-page/sphere-4.png) no-repeat 50% / cover, linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%);
+  }
+
+  &--pol {
+    background: url(../assets/img/spheres-page/sphere-5.png) no-repeat 50% / cover, linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%);
+  }
+
+  &__title {
+    max-width: 268px;
+
+    @include t {
+      max-width: 150px;
+    }
+
+    @include m {
+      transform: translate(-12px, 50px);
+    }
+  }
+
+  &__global-link {
+    color: #fff;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: block;
+
+    @include t {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @include m {
+      color: $text-dark-grey;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+
+      @include m {
+        height: 160px;
+        width: 150px;
+        left: 0;
+        right: unset;
+        bottom: 0;
+        top: unset;
+
+      }
+    }
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    margin-left: 20px;
+
+    @include m {
+      display: none;
+    }
+  }
+}

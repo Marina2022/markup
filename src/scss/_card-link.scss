@@ -1,0 +1,12 @@
+.card-link--round {
+  margin-left: 10px;
+  flex-shrink: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../assets/img/svg/round-btn.svg) no-repeat 50% / cover;
+  @include t {
+    width: 24px;
+    height: 24px;
+  }
+}

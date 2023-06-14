@@ -1,0 +1,6 @@
+version: '3'
+services:
+    application:
+        build: .
+        ports:
+            - "6666:80"

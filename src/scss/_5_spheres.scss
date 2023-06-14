@@ -1,0 +1,240 @@
+.spheres {
+  margin-bottom: 64px;
+
+  @include t {
+    margin-bottom: 48px;
+  }
+
+  @include m {
+    padding: 50px 0 218px;
+  }
+
+  &__section-title {
+    margin-bottom: 24px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__mobile-wrapper {
+    @include m {
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include m {
+      padding: 10px 15px;
+      width: 100%;
+      overflow-x: auto;
+      justify-content: start;
+      & > li {
+        margin-right: 16px;
+        flex-shrink: 0
+      }
+      & > li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .spheres-card {
+    position: relative;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 398px;
+    height: 416px;
+    flex-shrink: 1;
+    filter: grayscale(100%) brightness(1.4) contrast(50%);
+    transition: all 1s ease;
+
+    @include t {
+      width: 210px;
+      height: 210px;
+      padding: 16px 12px;
+    }
+
+    @include m {
+      flex-shrink: 0;
+      width: 187px;
+      height: 170px;
+      border-radius: 8px;
+      padding: 12px 12px;
+      margin-right: 16px;
+      filter: none;
+      &__title {
+        display: block;
+      }
+      &__link {
+        display: block;
+      }
+    }
+
+    & > * {
+      display: none;
+    }
+
+    &--active {
+      flex-shrink: 0;
+      filter: none;
+
+      & > * {
+        display: block;
+      }
+    }
+
+    &__global-link {
+        color: #fff;
+
+        &::before {
+          position: absolute;
+          content: '';
+          inset: 0;
+        }
+    }
+
+    &__content-wrapper {
+      @include m {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+
+    &__link {
+      animation: opacit .8s ease forwards;
+
+      @include m {
+        animation: unset;
+        width: 24px;
+        height: 24px;
+        background: url(../assets/img/svg/round-btn.svg) no-repeat 50% / cover;
+      }
+
+      span {
+        @include m {
+          display: none;
+        }
+      }
+    }
+
+
+
+    &__title {
+      font-family: 'SF Pro Display', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+
+      @include t {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 16px;
+      }
+
+      @include m {
+        font-size: 14px;
+        line-height: 17px;
+        max-width: 80%;
+        margin-bottom: 0;
+      }
+    }
+
+    &__link {
+      font-family: 'SF Pro Display', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration-line: underline;
+      color: #FFFFFF;
+      flex-shrink: 0;
+      @include t {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+
+
+  //У карточек Сферы применения идет градиент вторым фоном: на десткопе и планшете - только у активных, на телефоне - у всех
+
+  .spheres-card--glass {
+    background: url(../assets/img/spheres/sphere-img-1.png) no-repeat 50% / cover;
+    @include m {
+      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-1.png) no-repeat 50% / cover;
+    }
+  }
+  .spheres-card--active.spheres-card--glass {
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-1.png) no-repeat 50% / cover;
+  }
+
+  .spheres-card--lit {
+    background: url(../assets/img/spheres/sphere-img-2.png) no-repeat 50% / cover;
+    @include m {
+      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-2.png) no-repeat 50% / cover;
+    }
+  }
+  .spheres-card--active.spheres-card--lit {
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-2.png) no-repeat 50% / cover;
+  }
+
+  .spheres-card--str {
+    background: url(../assets/img/spheres/sphere-img-3.png) no-repeat 50% / cover;
+    @include m {
+      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-3.png) no-repeat 50% / cover;
+    }
+  }
+  .spheres-card--active.spheres-card--str {
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-3.png) no-repeat 50% / cover;
+  }
+
+  .spheres-card--lak {
+    background: url(../assets/img/spheres/sphere-img-4.png) no-repeat 50% / cover;
+    @include m {
+      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-4.png) no-repeat 50% / cover;
+    }
+  }
+  .spheres-card--active.spheres-card--lak {
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-4.png) no-repeat 50% / cover;
+  }
+
+  .spheres-card--pol {
+    background: url(../assets/img/spheres/sphere-img-5.png) no-repeat 50% / cover;
+    @include m {
+      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-5.png) no-repeat 50% / cover;
+    }
+  }
+  .spheres-card--active.spheres-card--pol {
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 57.29%), url(../assets/img/spheres/sphere-img-5.png) no-repeat 50% / cover;
+  }
+
+  .spheres-card--active .spheres-card__title {
+    animation: opacit .8s ease forwards;
+  }
+}
+
+@keyframes opacit {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}

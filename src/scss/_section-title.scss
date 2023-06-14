@@ -1,0 +1,15 @@
+.section-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+
+  @include t {
+    font-size: 24px;
+  }
+  @include m {
+    font-size: 20px;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,258 @@
+.main-header {
+  margin-bottom: 32px;
+  @include t {
+    margin-bottom: 24px;
+  }
+  @include m {
+    margin-bottom: 16px;
+  }
+
+  .header-top-menu {
+    background-color: $bg-grey;
+
+    @include t {
+      background-color: transparent;
+      padding: 20px 0 0;
+    }
+
+    @include m {
+      display: none;
+    }
+
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include t {
+        width: 64%;
+      }
+    }
+
+    &__phone-icon {
+      margin-right: 6px;
+      fill: #fff;
+
+      @include t {
+        fill: $text-light-grey;
+      }
+    }
+
+    &__phone-link {
+      padding: 8px 0;
+      color: #fff;
+      display: flex;
+      flex-basis: 326px;
+      align-items: center;
+      line-height: 140%;
+
+      @include t {
+        color: $text-light-grey;
+        font-size: 14px;
+      }
+    }
+
+    &__phone-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .top-menu-nav {
+      font-family: Manrope, serif;
+      flex-basis: 326px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 22px;
+
+      @include t {
+        flex-basis: 520px;
+      }
+
+      &__link {
+        color: #fff;
+        border: 1px solid transparent;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+
+        &:hover {
+          color: $secondary;
+          border-bottom-color: $secondary;
+        }
+
+        @include t {
+          color: $text-light-grey;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+
+  .header-bottom-menu {
+    border-bottom: #C6C6C6 1px solid;
+    font-family: Manrope, sans-serif;
+    line-height: 22px;
+    padding: 24px 0;
+    color: $text-dark-grey;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    @include t {
+      padding: 22px 0 15px;
+    }
+
+    @include m {
+      border-bottom: none;
+    }
+
+    &__container {
+      position: relative;
+    }
+
+    &__wrapper {
+      width: 71%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include t {
+        width: 100%;
+      }
+      @include m {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      flex-basis: 655px;
+      justify-content: space-between;
+
+      @include t {
+        flex-basis: 542px;
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      @include m {
+        display: none;
+      }
+    }
+
+    &__nav-link {
+      color: $text-dark-grey;
+
+      &--active {
+        display: block;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -30px;
+          left: 0;
+          right: 0;
+          height: 5px;
+          background-color: $primary;
+
+          @include t {
+            bottom: -18px;
+          }
+        }
+
+      }
+    }
+
+    &__logo {
+      width: 126px;
+      height: 35px;
+
+      @include t {
+        margin-right: 20px;
+        width: 90px;
+        height: 25px;
+      }
+
+      @include m {
+        width: 126px;
+        height: 35px;
+      }
+    }
+  }
+
+  .header-right-menu {
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    @include t {
+      bottom: 45px;
+    }
+
+    @include m {
+      bottom: 0px;
+      right: 15px;
+    }
+
+    &__order-call-btn {
+      margin-right: 24px;
+      @include t {
+        margin-right: 18px;
+      }
+
+      @include m {
+        display: none;
+      }
+    }
+
+    &__cart {
+      display: inline-flex;
+      width: 51px;
+      height: 51px;
+      border: 2px solid $primary;
+      border-radius: 8px;
+      justify-content: center;
+      align-items: center;
+
+      &--active {
+        background-color: $primary;
+      }
+
+      @include t {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include m {
+        width: 32px;
+        height: 32px;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      svg {
+        stroke: $text-dark-grey;
+      }
+    }
+  }
+
+  &__mobile-menu-btn {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    @include m {
+      display: block;
+    }
+  }
+}
+
+
+
+
+

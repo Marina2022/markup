@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./assets/libs/css/normalize.css"/>
+
+    <!-- main style -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- scripts libs -->
+    <script src="./assets/libs/js/inputmask.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <title>Страница не найдена</title>
+</head>
+
+<body class="page page--404">
+
+<header class="main-header">
+    <nav class="main-header__nav">
+
+        <!--Верхнее меню-->
+        <div class="main-header__top-menu header-top-menu">
+            <div class="container">
+                <div class="header-top-menu__wrapper">
+                    <a class="header-top-menu__phone-link" href="tel:+71111111111">
+                        <svg class="header-top-menu__phone-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_37_188)">
+                                <path
+                                        d="M4.41333 7.19333C5.37333 9.08 6.92 10.62 8.80667 11.5867L10.2733 10.12C10.4533 9.94 10.72 9.88 10.9533 9.96C11.7 10.2067 12.5067 10.34 13.3333 10.34C13.7 10.34 14 10.64 14 11.0067V13.3333C14 13.7 13.7 14 13.3333 14C7.07333 14 2 8.92667 2 2.66667C2 2.3 2.3 2 2.66667 2H5C5.36667 2 5.66667 2.3 5.66667 2.66667C5.66667 3.5 5.8 4.3 6.04667 5.04667C6.12 5.28 6.06667 5.54 5.88 5.72667L4.41333 7.19333Z"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_37_188">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>+7 (111) 111-11-11</span>
+                    </a>
+                    <ul class="header-top-menu__navlinks top-menu-nav">
+                        <li>
+                            <a class="top-menu-nav__link" href="delivery.html">
+                                Доставка
+                            </a>
+                        </li>
+                        <li class="top-menu-nav__item">
+                            <a class="top-menu-nav__link" href="garant.html">
+                                Гарантии
+                            </a>
+                        </li>
+                        <li class="top-menu-nav__item">
+                            <a class="top-menu-nav__link" href="docs.html">
+                                Документы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--    Нижнее меню-->
+        <div class="main-header__bottom-menu header-bottom-menu">
+            <div class="container header-bottom-menu__container">
+                <div class="header-bottom-menu__wrapper">
+                    <a href="/" class="header-bottom-menu__logo">
+                        <img src="assets/img/logo.svg" alt="logo">
+                    </a>
+                    <ul class="header-bottom-menu__nav">
+                        <li>
+                            <a class="header-bottom-menu__nav-link" href="catalog.html">
+                                Каталог продукции
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header-bottom-menu__nav-link" href="spheres.html">
+                                Сферы применения
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header-bottom-menu__nav-link" href="articles.html">
+                                Статьи
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header-bottom-menu__nav-link" href="contacts.html">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--правое меню  Кнопки Заказать звонок и Корзина и   -->
+                <div class="main-header__right-menu header-right-menu">
+                    <button class="btn header-right-menu__order-call-btn order-call-btn">Заказать звонок</button>
+                    <a class="header-right-menu__cart" href="cart.html" aria-label="Перейти в корзину">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 12L8 8C8 5.79086 9.79086 4 12 4V4C14.2091 4 16 5.79086 16 8L16 12"
+                                  stroke-width="2"
+                                  stroke-linecap="round"/>
+                            <path
+                                    d="M3.69435 12.6678C3.83942 10.9269 3.91196 10.0565 4.48605 9.52824C5.06013 9 5.9336 9 7.68053 9H16.3195C18.0664 9 18.9399 9 19.514 9.52824C20.088 10.0565 20.1606 10.9269 20.3057 12.6678L20.8195 18.8339C20.904 19.8474 20.9462 20.3542 20.6491 20.6771C20.352 21 19.8435 21 18.8264 21H5.1736C4.15655 21 3.64802 21 3.35092 20.6771C3.05382 20.3542 3.09605 19.8474 3.18051 18.8339L3.69435 12.6678Z"
+                                    stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+                <button class="main-header__mobile-menu-btn">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66667 9.33337H25.3333" stroke="#4A4A4A" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6.66667 16H25.3333" stroke="#4A4A4A" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M6.66667 22.6666H25.3333" stroke="#4A4A4A" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--Мобильное меню-->
+<div class="mobile-menu hidden">
+    <button class="mobile-menu__close-btn">
+        <img src="assets/img/svg/close-btn.svg" alt="close button">
+    </button>
+    <nav>
+        <ul class="mobile-menu__nav-list">
+            <li class="mobile-menu__nav-item">
+                <a href="catalog.html" class="mobile-menu__nav-link ">
+                    Каталог продукции
+                </a>
+            </li>
+
+            <li class="mobile-menu__nav-item">
+                <a href="spheres.html" class="mobile-menu__nav-link">
+                    Сферы применения
+                </a>
+            </li>
+            <li class="mobile-menu__nav-item">
+                <a href="articles.html" class="mobile-menu__nav-link">
+                    Статьи
+                </a>
+            </li>
+            <li class="mobile-menu__nav-item">
+                <a href="contacts.html" class="mobile-menu__nav-link ">
+                    Контакты
+                </a>
+            </li>
+
+            <li class="mobile-menu__nav-item">
+                <div class="mobile-menu__divider"></div>
+            </li>
+
+            <li class="mobile-menu__nav-item">
+                <a href="delivery.html" class="mobile-menu__nav-link ">
+                    Доставка
+                </a>
+            </li>
+
+            <li class="mobile-menu__nav-item">
+                <a href="garant.html" class="mobile-menu__nav-link ">
+                    Гарантии
+                </a>
+            </li>
+
+            <li class="mobile-menu__nav-item">
+                <a href="docs.html" class="mobile-menu__nav-link">
+                    Документы
+                </a>
+            </li>
+
+            <li class="mobile-menu__nav-item">
+                <a href="oferta.html" class="mobile-menu__nav-link">
+                    Публичная оферта
+                </a>
+            </li>
+
+            <li class="mobile-menu__nav-item">
+                <div class="mobile-menu__divider"></div>
+            </li>
+        </ul>
+        <button class="btn mobile-menu__btn order-call-btn">Заказать звонок</button>
+    </nav>
+</div>
+
+<main class="never-page">
+    <div class="never-page__banner">
+        <p class="never-page__text">
+            К сожалению данная страница недоступна, но у нас есть другие!
+        </p>
+        <a class="btn never-page__btn" href="/">
+            Вернуться на главную
+        </a>
+    </div>
+</main>
+
+<!--Модалка - Заказать звонок-->
+<div class="modal modal--order-call hidden">
+    <button class="modal__close-btn">
+        <img src="assets/img/svg/close-btn.svg" alt="">
+    </button>
+    <form action="#" class="modal__form">
+        <h2 class="modal__title">
+            Заказать звонок
+        </h2>
+
+        <p class="modal__text">
+            Оставьте свои контактные данные для получения дополнительной информации
+        </p>
+        <label for="order-call-name" class="modal__label">Имя</label>
+        <input type="text" class="modal__input" name="order-call-name" id="order-call-name">
+
+        <label for="order-call-phone" class="modal__label">Телефон</label>
+        <input type="text" class="modal__input" name="order-call-phone" id="order-call-phone">
+
+        <label for="order-call-message" class="modal__label">Ваш вопрос</label>
+        <textarea class="modal__message" name="order-call-message" id="order-call-message"></textarea>
+        <button class="btn modal__btn">Заказать звонок</button>
+        <p class="modal__oferta-text">
+            При нажатии на кнопку “Заказать звонок” пользователь соглашается с <a href="oferta.html">условиями публичной оферты.</a>
+        </p>
+    </form>
+</div>
+
+<!--Затеняющий оверлей для модалок-->
+<div class="catalog__overlay overlay hidden"></div>
+
+</body>
+</html>
+

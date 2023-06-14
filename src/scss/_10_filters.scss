@@ -1,0 +1,354 @@
+.filters {
+
+  &__mobile-close-btn {
+    display: none;
+
+    @include m {
+      display: block;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 24px;
+      height: 24px;
+      z-index: 19;
+    }
+  }
+
+  &__fieldset {
+    width: 100%;
+    padding: 16px 0 14px 16px;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 1px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    margin-bottom: 32px;
+
+    @include t {
+      margin-bottom: 24px;
+    }
+    @include m {
+      border-radius: 0;
+      margin-bottom: 0px;
+      box-shadow: none;
+      border-bottom: 2px solid $text-dark-grey;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__mobile-hidden-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include m {
+      display: none;
+    }
+  }
+
+  &__minerals-list-wrapper {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 32px;
+    position: fixed;
+    top: 270px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 1px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    width: 870px;
+    max-width: 100%;
+    height: 291px;
+    z-index: 19;
+    transform: translateX(-16px);
+
+    @include t {
+      top: 220px;
+      width: 688px;
+      height: 368px;
+    }
+
+    @include m {
+      position: static;
+      box-shadow: none;
+      height: 450px;
+      width: 100%;
+      padding-top: 4px;
+    }
+  }
+
+  &__minerals-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include m {
+      display: none;
+    }
+  }
+
+  &__minerals-list {
+    padding: 0px 16px 0px 0px;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    @include m {
+      height: 100%;
+    }
+  }
+
+  &__minerals-item {
+    padding-left: 14px;
+    width: 160px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    @include m {
+      margin-bottom: 16px;
+      width: 50%;
+    }
+  }
+
+  .minerals-item {
+    &__label {
+      display: block;
+      position: relative;
+      font-size: 14px;
+      line-height: 140%;
+      @include m {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .minerals-item__input:checked + .minerals-item__label {
+    color: $primary;
+    font-weight: 700;
+  }
+
+  .minerals-item__input:checked + .minerals-item__label:after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-45%);
+    background: url(../assets/img/svg/mineral-check.svg) no-repeat;
+    width: 8px;
+    height: 8px;
+  }
+
+
+  &__minerals-block {
+    margin-top: 66px;
+
+
+    @include t {
+      margin-top: 60px;
+    }
+
+    @include m {
+      margin-top: 0;
+
+    }
+  }
+
+  &__select-minerals-filter {
+    .filters__fieldset-title {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card-link--round {
+    margin-right: 16px;
+  }
+
+  &__fieldset-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    align-items: center;
+    color: $filter-title;
+    margin-bottom: 16px;
+
+    @include t {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    @include m {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  .filters__minerals-title {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  &__one-sphere {
+    border-bottom: $text-light-grey solid 1px;
+    margin-bottom: 16px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__spheres-list {
+    height: 384px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @include m {
+      height: 290px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $text-light-grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background-color: $primary;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    scrollbar-color: $primary $text-light-grey;
+    scrollbar-width: thin;
+  }
+
+  .sphere-block {
+    max-width: 95%;
+
+    &__title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $text-dark-grey;
+      margin-bottom: 18px;
+      max-width: 202px;
+
+      @include m {
+        margin-bottom: 19px;
+      }
+
+      &::after {
+        cursor: pointer;
+        content: '';
+        display: block;
+        position: absolute;
+        right: -38px;
+        width: 24px;
+        height: 24px;
+        background: url(../assets/img/svg/accordion-arrow.svg) no-repeat;
+
+        @include t {
+          right: -7px;
+        }
+      }
+
+      @include t {
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      @include m {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .sphere-block--closed .sphere-block__title::after {
+    transform: rotate(180deg);
+  }
+
+  .subspheres-list {
+
+    @include m {
+      margin-top: 27px;
+    }
+
+    &__item {
+      margin-bottom: 28px;
+      padding-left: 36px;
+    }
+  }
+
+  .subspheres-item {
+    &__label {
+      line-height: 19px;
+      position: relative;
+      cursor: pointer;
+      max-width: 186px;
+      display: block;
+
+      @include t {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url(../assets/img/svg/check-unchecked.svg) no-repeat 50% / contain;
+        top: -3px;
+        left: -36px;
+      }
+    }
+
+    .subspheres-item__input:checked + .subspheres-item__label:before {
+      background: url(../assets/img/svg/check-checked.svg) no-repeat 50% / contain;
+    }
+  }
+
+  .silanization-block {
+    &__radio-wrapper {
+      margin-bottom: 13px;
+
+      @include m {
+        margin-top: 26px;
+      }
+    }
+
+    &__label {
+      padding-left: 36px;
+      position: relative;
+      cursor: pointer;
+      display: block;
+
+      @include t {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(../assets/img/svg/radio-unchecked.svg);
+      }
+    }
+  }
+
+  .silanization-block__input:checked + .silanization-block__label:before {
+    background: url(../assets/img/svg/radio-checked.svg);
+  }
+}

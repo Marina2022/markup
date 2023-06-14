@@ -1,0 +1,19 @@
+.look-all {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: $text-dark-grey;
+  border-radius: 4px;
+  background-color: $primary;
+  padding: 8px 16px;
+  @include t {
+    font-size: 12px;
+  }
+  @include m {
+    display: none;
+  }
+}

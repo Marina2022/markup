@@ -1,0 +1,48 @@
+.btn {
+  border-radius: 8px;
+  padding: 16px 31px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: $text-dark-grey;
+  background-color: $primary;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary;
+  }
+
+
+  @include t {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 24px;
+  }
+
+  @include m {
+    padding: 16px 32px;
+  }
+}
+
+.back-btn {
+  z-index:10;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: $text-dark-grey;
+  border-radius: 4px;
+  background-color: $primary;
+  padding: 8px 16px;
+  @include t {
+    font-size: 12px;
+  }
+  @include m {
+    display: none;
+  }
+
+}

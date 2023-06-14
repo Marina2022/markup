@@ -1,0 +1,20 @@
+@mixin m {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin t {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+
+
+@mixin t-card {
+  @media (min-width: 768px) and (max-width: 1199px){
+    @content;
+  }
+}
+

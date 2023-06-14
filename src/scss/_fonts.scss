@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Regular'), url('../assets/fonts/Gilroy-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Medium'), url('../assets/fonts/Gilroy-Medium.woff2') format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy-Semibold'), url('../assets/fonts/Gilroy-Semibold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto-Semibold'), url('../assets/fonts/Roboto-Semibold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('RobotoBold'), url('../assets/fonts/Roboto-Bold.woff2') format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/***
+ */
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope-Regular'), url('../assets/fonts/Manrope-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope-SemiBold'), url('../assets/fonts/Manrope-SemiBold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope-Bold'), url('../assets/fonts/Manrope-Bold.woff2') format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope-ExtraBold'), url('../assets/fonts/Manrope-ExtraBold.woff2') format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/***
+ */
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('OpenSans-SemiBold'), url('../assets/fonts/OpenSans-SemiBold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/***
+ */
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SFProDisplay-Regular'), url('../assets/fonts/SFProDisplay-Regular.woff2') format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SFProDisplay-Semibold'), url('../assets/fonts/SFProDisplay-Semibold.woff2') format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
